@@ -1,0 +1,92 @@
+﻿<div class="fondo">
+    <div class="contenedor-principal">
+
+        <div class="fecha-boda">
+            14 · 06 · 2026
+        </div>
+
+        <div class="sobre" id="sobre">
+
+            <div class="tapa-v"></div>
+            <div class="cuerpo-sobre"></div>
+
+            <div class="hoja" id="hoja">
+
+                <div class="marco-rosas"></div>
+
+                <div class="contenido-hoja">
+
+                    <h1>Nuestra Boda</h1>
+
+                    <p class="texto-elegante">
+                        Nos encantaría contar con su presencia en este día tan especial.
+                    </p>
+
+                    <form asp-action="Registrar" method="post" class="form-invitados">
+                        @Html.AntiForgeryToken()
+
+                        <input type="text" name="Nombre" placeholder="Nombre" required />
+                        <input type="text" name="Apellidos" placeholder="Apellidos de la familia" required />
+                        <input type="number" name="NumeroPersonas" placeholder="Número de personas" min="1" required />
+
+                        <button type="submit" class="btn-principal">
+                            Registrar familia
+                        </button>
+                    </form>
+
+                    <section class="detalles-evento">
+
+                        <div class="fotos-novios">
+                            <img src="/img/novio.jpg" alt="Novio">
+                            <img src="/img/novia.jpg" alt="Novia">
+                        </div>
+
+                        <div class="info-evento">
+                            <div class="bloque-info">
+                                <h3>Fecha</h3>
+                                <p>14 de Junio de 2026</p>
+                            </div>
+
+                            <div class="bloque-info">
+                                <h3>Lugar</h3>
+                                <p>Quito · Ecuador</p>
+                            </div>
+
+                            <div class="bloque-info">
+                                <h3>Vestimenta</h3>
+                                <p>Formal elegante</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="confirmacion">
+
+                        <h2>Confirmación de asistencia</h2>
+
+                        <p class="pregunta">
+                            ¿Asistirá la familia <span id="apellidoFamilia"></span>?
+                        </p>
+
+                        <div class="botones-confirmacion">
+                            <button type="button" class="btn-confirmar" id="btnSi">
+                                Sí, asistiremos
+                            </button>
+
+                            <button type="button" class="btn-no" id="btnNo">
+                                No podremos asistir
+                            </button>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="nombres-boda">
+            Alex & Ecaterina
+        </div>
+
+    </div>
+</div>
