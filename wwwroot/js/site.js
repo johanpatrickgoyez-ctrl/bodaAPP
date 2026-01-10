@@ -9,21 +9,18 @@
 
     let invitadoId = null;
 
-    // Abrir sobre
     if (sobre) {
         sobre.addEventListener("click", () => {
             sobre.classList.add("abierto");
         });
     }
 
-    // Mostrar apellido en confirmación
     if (apellidoInput && apellidoSpan) {
         apellidoInput.addEventListener("input", () => {
             apellidoSpan.textContent = apellidoInput.value;
         });
     }
 
-    // Registrar familia (AJAX)
     if (form) {
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
@@ -58,23 +55,20 @@
         });
     }
 
-    // Confirmación SI
     if (btnSi) {
         btnSi.addEventListener("click", async () => {
             await enviarConfirmacion("SI");
-            mostrarMensaje("Gracias por confirmar su asistencia");
+            mostrarMensaje("Gracias por confirmar su asistencia 💍");
         });
     }
 
-    // Confirmación NO
     if (btnNo) {
         btnNo.addEventListener("click", async () => {
             await enviarConfirmacion("NO");
-            mostrarMensaje("Gracias por avisarnos");
+            mostrarMensaje("Gracias por avisarnos 💐");
         });
     }
 
-    // Enviar confirmación al servidor
     async function enviarConfirmacion(respuesta) {
         if (!invitadoId) return;
 
@@ -87,7 +81,6 @@
         });
     }
 
-    // Mensaje flotante
     function mostrarMensaje(texto, error = false) {
         const msg = document.createElement("div");
         msg.textContent = texto;

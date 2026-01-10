@@ -320,3 +320,49 @@ h2 {
 .sobre.abierto .hoja {
     pointer-events: auto;
 }
+
+.btn-confirmar,
+.btn-no {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    padding: 18px 44px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-confirmar {
+    background: linear-gradient(135deg, #2c2c2c, #000000);
+    color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.25),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.btn-confirmar:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.btn-no {
+    background: linear-gradient(135deg, #f5f1ea, #e8e2d6);
+    color: #000000;
+    border: 2px solid #000000;
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.18),
+        inset 0 0 0 1px rgba(255,255,255,0.4);
+}
+
+.btn-no:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}

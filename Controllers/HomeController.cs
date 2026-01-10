@@ -33,7 +33,7 @@ namespace bodaAPP.Controllers
                 });
             }
 
-            invitado.Confirmacion = null; // aún no confirma
+            invitado.Confirmacion = null; 
 
             _context.Invitados.Add(invitado);
             await _context.SaveChangesAsync();
@@ -54,7 +54,7 @@ namespace bodaAPP.Controllers
             if (invitado == null)
                 return NotFound();
 
-            invitado.Confirmacion = respuesta; // "SI" o "NO"
+            invitado.Confirmacion = respuesta; 
             await _context.SaveChangesAsync();
 
             return Ok(new { success = true });

@@ -16,6 +16,6 @@ namespace bodaAPP.Models
         [Range(1, 20, ErrorMessage = "Debe ser al menos 1 persona")]
         public int NumeroPersonas { get; set; }
 
-        public string? Confirmacion { get; set; } // "SI" o "NO"
+        public string? Confirmacion { get; set; } 
     }
 }
